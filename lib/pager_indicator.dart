@@ -38,7 +38,7 @@ class PagerIndicator extends StatelessWidget {
           viewModel: PageBubbleViewModel(
             page.iconAssetPath,
             CupertinoColors.lightBackgroundGray,
-            isHollow,
+            false,
             percentActive,
           ),
         ),
