@@ -1,5 +1,6 @@
 import 'dart:ui';
 import 'package:fancy_on_boarding/page_model.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class PagerIndicator extends StatelessWidget {
@@ -36,7 +37,7 @@ class PagerIndicator extends StatelessWidget {
         PageBubble(
           viewModel: PageBubbleViewModel(
             page.iconAssetPath,
-            page.color,
+            CupertinoColors.lightBackgroundGray,
             isHollow,
             percentActive,
           ),
