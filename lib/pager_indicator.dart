@@ -109,12 +109,12 @@ class PageBubble extends StatelessWidget {
           decoration: BoxDecoration(
             shape: BoxShape.circle,
             color: viewModel.isHollow
-                ? const Color(0x88FFFFFF)
+                ? CupertinoColors.lightBackgroundGray
                     .withAlpha((0x88 * viewModel.activePercent).round())
                 : const Color(0x88FFFFFF),
             border: Border.all(
               color: viewModel.isHollow
-                  ? const Color(0x88FFFFFF).withAlpha(
+                  ? CupertinoColors.lightBackgroundGray.withAlpha(
                       (0x88 * (1.0 - viewModel.activePercent)).round())
                   : Colors.transparent,
               width: 3.0,
@@ -122,10 +122,7 @@ class PageBubble extends StatelessWidget {
           ),
           child: Opacity(
             opacity: viewModel.activePercent,
-            child: Image.asset(
-              viewModel.iconAssetPath,
-              color: viewModel.color,
-            ),
+            child: Container()
           ),
         ),
       ),
